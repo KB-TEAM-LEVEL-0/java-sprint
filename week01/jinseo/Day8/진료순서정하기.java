@@ -1,0 +1,19 @@
+package Day8;
+
+public class 진료순서정하기 {
+    public int[] solution(int[] emergency) {
+        int[] answer = new int[emergency.length];
+
+        for(int i = 0; i < emergency.length; i++) {
+            int num =1;
+            for(int j =  0; j < emergency.length; j++) {
+                if(emergency[i] < emergency[j]) {
+                    num++;
+                }
+            }
+            answer[i] = num;
+        }
+
+        return answer;
+    }
+}
