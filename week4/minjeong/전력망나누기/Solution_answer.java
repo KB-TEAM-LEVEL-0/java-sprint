@@ -1,4 +1,4 @@
-package 전력망나누기;
+package week4.minjeong.전력망나누기;
 
 import java.util.*;
 

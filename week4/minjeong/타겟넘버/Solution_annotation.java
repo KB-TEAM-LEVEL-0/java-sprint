@@ -1,4 +1,4 @@
-package 타겟넘버;
+package week4.minjeong.타겟넘버;
 
 public class Solution_annotation {
 

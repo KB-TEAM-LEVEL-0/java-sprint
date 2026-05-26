@@ -1,4 +1,4 @@
-package 소수찾기;
+package week4.minjeong.소수찾기;
 
 import java.util.*;
 
