@@ -1,4 +1,4 @@
-class 피자나눠먹기 {
+class 피자나눠먹기2 {
     public int solution(int n) {
         return getLCM(6, n)/6;
     }
