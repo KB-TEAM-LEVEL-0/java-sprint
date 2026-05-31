@@ -1,8 +1,8 @@
-package week3.jinseo;
+package jinseo.자료구조;
 
 import java.util.Scanner;
 
-public class 평균구하기 {
+public class p2_평균구하기 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
