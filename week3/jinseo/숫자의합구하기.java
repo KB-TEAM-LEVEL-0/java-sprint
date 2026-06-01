@@ -1,8 +1,8 @@
-package jinseo.자료구조;
+package week3.jinseo;
 
 import java.util.Scanner;
 
-public class p1_숫자의합구하기 {
+public class 숫자의합구하기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

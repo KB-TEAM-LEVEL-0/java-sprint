@@ -1,4 +1,4 @@
-package jinseo.자료구조;
+package week3.jinseo;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-public class p8_좋은수구하기 {
+public class 좋은수구하기 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

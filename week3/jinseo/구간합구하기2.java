@@ -1,10 +1,10 @@
-package jinseo.자료구조;
+package week3.jinseo;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class p4_구간합구하기2 {
+public class 구간합구하기2 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
