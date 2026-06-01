@@ -1,11 +1,11 @@
-package week3.jinseo;
+package jinseo.자료구조;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-public class 구간합구하기 {
+public class p3_구간합구하기 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader =
                 new BufferedReader(new InputStreamReader(System.in));
