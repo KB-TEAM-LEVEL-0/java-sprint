@@ -2,48 +2,41 @@ import java.util.*;
 
 class Solution {
     public int solution(int[][] board, int[] moves) {
-        // n * n 크기 정사각 격자
-        // 바구니 : stack?
-        // 같은 모양 인형 2개 쌓이면 -> 사라짐 (터짐)
-        // 인형이 없는 곳은 아무 일도 일어나지 않음
-
-        // board = [
-        //  [0,0,0,0,0],
-        //  [0,0,1,0,3],
-        //  [0,2,5,0,1],
-        //  [4,2,4,4,2],
-        //  [3,5,1,3,1]
-        // ]
-
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
 
-        int before = 0;
-
         for(int move : moves) {
-            // 1. 인형을 뽑는데 없으면(0)이면 다음 행으로
-            // move : 열
-            // 인형의 종류는 5개?
-            // j : 행
-            for(int j=0; j<5; j++) {
-                if(board[j][move]==0) {
+            // moves는 1부터 시작하므로 배열 인덱스에 맞게 -1
+            int col = move - 1;
+
+            // 행은 board 크기만큼 반복
+            for(int j = 0; j < board.length; j++) {
+
+                // 인형이 없으면 다음 행으로
+                if(board[j][col] == 0) {
                     continue;
-                }else {
-                    if(before == board[j][move]) {
-                        // 이전 넘버와 같으면 저장하지 않고 pop
+                } else {
+                    // 현재 뽑은 인형
+                    int doll = board[j][col];
+
+                    // 뽑은 자리는 비우기
+                    board[j][col] = 0;
+
+                    // * 이전 값과 비교하는게 아니라 stack.peek()와 비교한다
+                    // 스택이 비어있지 않고, 맨 위 인형과 현재 인형이 같으면 터짐
+                    if(!stack.isEmpty() && stack.peek() == doll) {
                         stack.pop();
-                        answer+=2;
-                        board[j][move] = 0;
-                        board[j-1][move] = 0;
-                    }else {
-                        stack.push(board[j][move]);
-                        // 이전 번호 저장
-                        before = board[j][move];
+                        answer += 2;
+                    } else {
+                        stack.push(doll);
                     }
-                    System.out.print(stack);
+
+                    // 한 번에 인형 하나만 뽑아야 하므로 종료
+                    break;
                 }
             }
         }
+
         return answer;
     }
 }
