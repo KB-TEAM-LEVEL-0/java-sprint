@@ -1,9 +1,9 @@
-package jinseo.자료구조;
+package week3.jinseo;
 
 import java.util.Scanner;
 import java.io.IOException;
 
-public class p6_연속된자연수의합구하기 {
+public class 연속된자연수의합구하기{
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
